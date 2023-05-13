@@ -6,106 +6,75 @@ function App() {
 
     return (
         <>
-            <div className="container p-2 mx-auto">
-                <div className="flex flex-row flex-wrap py-4">
-                    <aside className="w-full sm:w-1/3 md:w-1/4 px-2">
+            <div className="p-2 m-0 mx-4 mt-8 md:mt-20 lg:mt-32">
+                <div className="flex flex-row py-4">
+                    <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
                         <div className="sticky top-0 p-4 bg-white rounded-xl w-full">
-                            <ul className="nav flex flex-col overflow-hidden">
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link text-purple-800 hover:text-purple-600 truncate"
-                                        href="/#home"
-                                    >
-                                        <span className="fa fa-home mr-2"></span>{" "}
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link text-purple-800 hover:text-purple-600"
-                                        href="/#reports"
-                                    >
-                                        <span className="fa fa-chart-bar mr-2"></span>{" "}
-                                        Blog{" "}
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link text-purple-800 hover:text-purple-600"
-                                        href="/#int"
-                                    >
-                                        <span className="fa fa-layer-group mr-2"></span>{" "}
-                                        About{" "}
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link text-purple-800 hover:text-purple-600"
-                                        href="/#reports"
-                                    >
-                                        <span className="fa fa-chart-bar mr-2"></span>{" "}
-                                        Guest Book{" "}
-                                    </a>
-                                </li>
-                            </ul>
+                            <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start ">
+                                <nav
+                                    className="flex flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+                                    id="nav"
+                                >
+                                    <li className="nav-item">
+                                        <a
+                                            className="nav-link text-purple-800 hover:text-purple-600 truncate"
+                                            href="/#home"
+                                        >
+                                            <span className="fa fa-home mr-2"></span>{" "}
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a
+                                            className="nav-link text-purple-800 hover:text-purple-600"
+                                            href="/#blog"
+                                        >
+                                            <span className="fa fa-chart-bar mr-2"></span>{" "}
+                                            Blog{" "}
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a
+                                            className="nav-link text-purple-800 hover:text-purple-600"
+                                            href="/#about"
+                                        >
+                                            <span className="fa fa-layer-group mr-2"></span>{" "}
+                                            About{" "}
+                                        </a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a
+                                            className="nav-link text-purple-800 hover:text-purple-600"
+                                            href="/#GuestBook"
+                                        >
+                                            <span className="fa fa-chart-bar mr-2"></span>{" "}
+                                            Guest Book{" "}
+                                        </a>
+                                    </li>
+                                </nav>
+                            </div>
                         </div>
                     </aside>
-                    <main
-                        role="main"
-                        className="w-full sm:w-2/3 md:w-3/4 pt-1 px-2"
-                    >
-                        <h1 className="text-2xl" id="home">
-                            Main Content
+                    <main className="flex-auto w-full sm:w-2/3 md:w-3/4 pt-1 px-2 font-serif flex-row">
+                        <h1 className="text-2xl font-bold" id="home">
+                            Abraham Beltran
                         </h1>
-                        <p>
-                            Let's look at the base Tailwind classNamees that are
-                            used for this layout. There are 2 columns. The left
-                            sidebar (aside), and the main content area on the
-                            right.{" "}
+                        <p className="my-4">
+                            This is my personal website which is currently under
+                            construction. Plans are to have the sections
+                            currently seen on the left with login added so that
+                            posts can have comments/likes/user posts/profiles
                         </p>
-                        <p className="pt-4">
+                        <p className="my-4">
+                            This website will be developed slowly over the
+                            course of 2023. More features and styling coming
+                            soon!
+                        </p>
+                        <p className="my-4">
                             {" "}
-                            The flexbox (parent) container:{" "}
+                            This page is hosted using nginx on an ubuntu
+                            instance hosted by DigitalOcean{" "}
                         </p>
-                        <ul>
-                            <li>
-                                <span className="text-purple-700">flex</span> -
-                                for <code>dislay:flex</code>
-                            </li>
-                            <li>
-                                flex-row - for <code>flex-direction: row</code>
-                            </li>
-                            <li>
-                                flex-wrap - for <code>flex-wrap: wrap</code>
-                            </li>
-                            <li>
-                                py-4 - for{" "}
-                                <code>padding-(top|bottom): 1rem</code>
-                            </li>
-                        </ul>
-                        <p className="pt-4"> The aside (left) column: </p>
-                        <ul>
-                            <li>w-full - for 100% width</li>
-                            <li>sm:w-1/3 - for 33% width on sm and larger</li>
-                            <li>md:w-1/4 - for 25% width on md and larger</li>
-                            <li>
-                                px-2 - for{" "}
-                                <code>padding-(left|right): .5rem</code>
-                            </li>
-                        </ul>
-                        <p className="pt-4"> The main (right) column: </p>
-                        <ul>
-                            <li>w-full - for 100% width</li>
-                            <li>sm:w-1/3 - for 66% width on sm and larger</li>
-                            <li>md:w-1/4 - for 75% width on md and larger</li>
-                            <li>
-                                pt-1 - for <code>padding-top: .25rem</code>
-                            </li>
-                            <li>
-                                px-2 - for{" "}
-                                <code>padding-(left|right): .5rem</code>
-                            </li>
-                        </ul>
                     </main>
                 </div>
             </div>

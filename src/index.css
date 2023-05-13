@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#root{
+  text-align: start;
+}
+
 body{
   margin: 0 auto;
   max-width: 56em;
