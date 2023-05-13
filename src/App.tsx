@@ -7,7 +7,7 @@ function App() {
     return (
         <>
             <div className="p-2 m-0 mx-4 mt-8 md:mt-20 lg:mt-32">
-                <div className="flex flex-row py-4">
+                <div className="flex md:flex-row py-4 flex-col">
                     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
                         <div className="sticky top-0 p-4 bg-white rounded-xl w-full">
                             <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start ">
@@ -15,7 +15,7 @@ function App() {
                                     className="flex flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
                                     id="nav"
                                 >
-                                    <li className="nav-item">
+                                    <li>
                                         <a
                                             className="nav-link text-purple-800 hover:text-purple-600 truncate"
                                             href="/#home"
@@ -24,7 +24,7 @@ function App() {
                                             Home
                                         </a>
                                     </li>
-                                    <li className="nav-item">
+                                    <li>
                                         <a
                                             className="nav-link text-purple-800 hover:text-purple-600"
                                             href="/#blog"
@@ -33,7 +33,7 @@ function App() {
                                             Blog{" "}
                                         </a>
                                     </li>
-                                    <li className="nav-item">
+                                    <li>
                                         <a
                                             className="nav-link text-purple-800 hover:text-purple-600"
                                             href="/#about"
@@ -42,7 +42,7 @@ function App() {
                                             About{" "}
                                         </a>
                                     </li>
-                                    <li className="nav-item">
+                                    <li>
                                         <a
                                             className="nav-link text-purple-800 hover:text-purple-600"
                                             href="/#GuestBook"
