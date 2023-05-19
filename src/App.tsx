@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
@@ -8,8 +7,6 @@ import About from "./components/About";
 import Guestbook from "./components/Guestbook";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <BrowserRouter>
             <div className="p-2 m-0 mx-4 mt-8 md:mt-20 lg:mt-32">

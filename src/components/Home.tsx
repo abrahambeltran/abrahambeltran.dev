@@ -1,5 +1,3 @@
-import React from "react";
-
 const Home = () => {
     return (
         <main className="flex-auto w-full sm:w-2/3 md:w-3/4 pt-1 px-2 font-serif flex-row">
