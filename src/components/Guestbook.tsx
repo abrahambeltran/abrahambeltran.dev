@@ -1,5 +1,10 @@
 const Guestbook = () => {
-    return <div>Guestbook</div>;
+    return (
+        <div>
+            <h1>Live guestbook</h1>
+            <p> coming soon</p>
+        </div>
+    );
 };
 
 export default Guestbook;
