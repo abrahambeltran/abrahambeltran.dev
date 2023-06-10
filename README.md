@@ -5,8 +5,8 @@ This is a personal blog application written for my personal website. Future feat
 ## TODO:
 
 -   [x] Create basic templates
--   [ ] Implement blog post layout
--   [ ] Add blog post feature to django admin
+-   [x] Implement blog post layout
+-   [x] Add blog post feature to django admin
 -   [ ] Implement search function
 -   [ ] Implement error checking for input
 -   [ ] Allow pagination or infinite generative scroll
