@@ -8,11 +8,11 @@ This is a personal blog application written for my personal website. Future feat
 -   [x] Implement blog post layout
 -   [x] Add blog post feature to django admin
 -   [x] Support for creating posts using markdown
+-   [ ] Simplify styling/css files
 -   [ ] Implement search function
 -   [ ] Allow pagination or infinite generative scroll
 -   [ ] Integrate RSS feeds
 -   [ ] Add WebSocket chat/guestbook implementation
--   [ ] Possible graphical views for stock tickers/github repo activity
 
 ## Installation
 
