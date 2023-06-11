@@ -21,7 +21,7 @@
                 <div class="article__inner">
                 <div class="article__head">
                     <time class="article__date">{{ posts.created_at|timesince }} ago </time>
-                    <a class="article__image" href="/posts/egg">
+                    <a class="article__image" href="/{{ posts.slug }}/">
                     <picture>
                         <source srcset="/media/egg/egg-icon.webp" type="image/webp"/>
                         <source srcset="/media/egg/egg-icon.jpg" type="image/jpg"/>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="article__content">
                     <h2 class="article__title">
-                    <a href="/posts/">{{posts.title}}</a>
+                    <a href="/{{ posts.slug }}/">{{posts.title}}</a>
                     </h2>
                     <p class="article__excerpt">{{ posts.intro }}</p>
                 </div>

@@ -1,5 +1,17 @@
 {% extends 'blog/base.html' %} 
-{% block title %} POST | abe dev {% endblock %} 
+{% load markdownify %}
+{% block title %} {{ post.title }} | abe dev {% endblock %} 
 {% block content %}
-    <h1>POST</h1>
+    <div class="container animate">
+        <article class="post" aria-label="Post">
+            <div class="post__content">
+                <div class="article__content">
+                    <h2 class="article__title">
+                        <h1>{{ post.title }}</h1>
+                    </h2>
+                    {{ post.body|markdownify }}
+                </div>
+            </div>
+        </article>
+    </div>
 {% endblock %}

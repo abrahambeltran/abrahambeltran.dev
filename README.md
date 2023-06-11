@@ -7,8 +7,8 @@ This is a personal blog application written for my personal website. Future feat
 -   [x] Create basic templates
 -   [x] Implement blog post layout
 -   [x] Add blog post feature to django admin
+-   [x] Support for creating posts using markdown
 -   [ ] Implement search function
--   [ ] Implement error checking for input
 -   [ ] Allow pagination or infinite generative scroll
 -   [ ] Integrate RSS feeds
 -   [ ] Add WebSocket chat/guestbook implementation
