@@ -87,7 +87,10 @@ MARKDOWNIFY = {
             'ol',
             'p',
             'strong',
-            'ul'],
+            'ul',
+            'code',
+            'span',
+            'pre' ],
         "MARKDOWN_EXTENSIONS": [
             "markdown.extensions.fenced_code", # dotted path
             "fenced_code",  # also works
