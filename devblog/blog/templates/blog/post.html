@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %} 
 {% load markdownify %}
+
 {% block title %} {{ post.title }} | abe dev {% endblock %} 
 {% block content %}
     <div class="container animate">
@@ -9,7 +10,9 @@
                     <h2 class="article__title">
                         <h1>{{ post.title }}</h1>
                     </h2>
-                    {{ post.body|markdownify }}
+                    <p>
+                        {{ post.body|markdownify|safe }}
+                    </p>
                 </div>
             </div>
         </article>

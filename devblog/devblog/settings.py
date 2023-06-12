@@ -69,6 +69,41 @@ TEMPLATES = [
     },
 ]
 
+MARKDOWNIFY = {
+   "default": {
+        "WHITELIST_TAGS": [
+            "a", 
+            "p", 
+            "h1", 
+            "h2", 
+            "h3",
+            'abbr',
+            'acronym',
+            'b',
+            'blockquote',
+            'em',
+            'i',
+            'li',
+            'ol',
+            'p',
+            'strong',
+            'ul'],
+        "MARKDOWN_EXTENSIONS": [
+            "markdown.extensions.fenced_code", # dotted path
+            "fenced_code",  # also works
+        ],
+        "MARKDOWN_EXTENSION_CONFIGS": {
+            "fenced_code": {
+                "lang_prefix": "example-"
+            }
+        }
+   },
+   "alternative": {
+      "WHITELIST_TAGS": ["a", "p", ],
+      "MARKDOWN_EXTENSIONS": ["markdown.extensions.fenced_code", ]
+   }
+}
+
 WSGI_APPLICATION = 'devblog.wsgi.application'
 
 
