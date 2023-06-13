@@ -23,4 +23,5 @@ urlpatterns = [
     path("about/", about, name='about'),
     path('admin/', admin.site.urls),
     path("<slug:slug>/", posts, name='post'),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
