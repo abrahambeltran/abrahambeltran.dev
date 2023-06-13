@@ -2,60 +2,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="all" />
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="all" />
 
-        <title>{% block title %}{% endblock %}</title>
+      <title>{% block title %}{% endblock %}</title>
 
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="{% static 'styles/main.css' %}"
-        />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="{% static 'ionicons/css/ionicons.css' %}"
-        />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="{% static 'styles/jost.css' %}"
-        />
-        <script>
-            if (localStorage.getItem("theme") === "light") {
-                document.documentElement.setAttribute("light", "");
-                document.documentElement.classList.add("light-mode");
-            } else {
-                document.documentElement.setAttribute("dark", "");
-                document.documentElement.classList.add("dark-mode");
-            }
-            function darkMode() {
-                let element = document.body;
-                element.className = "dark-mode";
-                document.documentElement.setAttribute("dark", "");
-            }
-            function lightMode() {
-                let element = document.body;
-                element.className = "light-mode";
-                document.documentElement.setAttribute("light", "");
-            }
-            function toggleTheme() {
-              var icon = document.getElementById("theme-icon");
-              
-              if (icon.classList.contains("ion-ios-moon")) {
-                // Switch to light mode
-                icon.classList.remove("ion-ios-moon");
-                icon.classList.add("ion-ios-sunny");
-              } else {
-                // Switch to dark mode
-                icon.classList.remove("ion-ios-sunny");
-                icon.classList.add("ion-ios-moon");
-              }
-            }
-        </script>
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'styles/main.css' %}"
+      />
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'ionicons/css/ionicons.css' %}"
+      />
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'styles/jost.css' %}"
+      />
+      
+      <meta name="theme-color" content="#111016">
+      <script>
+          
+              document.documentElement.setAttribute("light", "");
+              document.documentElement.classList.toggle("light-mode");
+          
+      </script>
+      
+      <script src="{% static 'js/toggles.js' %}"></script>
     </head>
     <body>
         <header class="header" id="top">
@@ -90,9 +68,8 @@
                                             >About</a
                                         >
                                     </li>
-                                    <li class="nav__item nav__item-icon">
+                                    <!--<li class="nav__item nav__item-icon">
                                         <div class="toggle-theme">
-
                                             <div
                                                 class="toggle-moon"
                                                 onclick="darkMode()"
@@ -102,7 +79,7 @@
                                             </div>
                                             <div
                                                 class="toggle-sun"
-                                                onclick="lightMode()"
+                                                onclick="darkMode()"
                                                 title="Enable light mode"
                                             >
                                                 <i
@@ -110,7 +87,7 @@
                                                 ></i>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </div>
                         </nav>
