@@ -11,7 +11,7 @@
     --dark: #0c101a;
     --dark-blue: #1e2740;
     --background-color: var(--white);
-    --background-alt-color: var(--light-blue);
+    --background-alt-color: #dde5e8;
     --text-color: var(--dark-blue);
     --text-alt-color: var(--blue-gray);
     --heading-font-color: var(--dark-blue);
