@@ -1972,6 +1972,7 @@ table td {
 }
 .main-nav {
     margin-left: auto;
+    align-items: end;
 }
 @media only screen and (max-width: 1024px) {
     .main-nav {
@@ -2013,12 +2014,12 @@ table td {
 }
 .main-nav__box {
     display: flex;
-    align-items: center;
+    align-items: end;
 }
 .main-nav__box .nav__icon-close {
     display: none;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
     width: 36px;
     height: 36px;
     font-size: 24px;
