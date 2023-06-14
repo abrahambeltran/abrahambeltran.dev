@@ -9,7 +9,7 @@ const Layout = () => {
                 </p>
                 <nav className="flex flex-col items-end list-none m-6 ">
                     <Link
-                        className="inline-block w-full text-center text-purple-800 hover:text-purple-600 "
+                        className="inline-block w-full text-center"
                         to="/"
                     >   
                         <div className="inline-block w-full text-end hover:bg-amber-500">
@@ -18,7 +18,7 @@ const Layout = () => {
                     </Link>
 
                     <Link
-                        className="inline-block w-full text-center text-purple-800 hover:text-purple-600"
+                        className="inline-block w-full text-center"
                         to="/blog"
                     >
                         <div className="inline-block w-full text-end hover:bg-amber-500">
@@ -27,7 +27,7 @@ const Layout = () => {
                     </Link>
 
                     <Link
-                        className="inline-block w-full text-center text-purple-800 hover:text-purple-600"
+                        className="inline-block w-full text-center"
                         to="https://github.com/abrahambeltran"
                     >
                         <div className="inline-block w-full text-end hover:bg-amber-500">
@@ -36,7 +36,7 @@ const Layout = () => {
                     </Link>
 
                     <Link
-                        className="inline-block w-full text-center text-purple-800 hover:text-purple-600"
+                        className="inline-block w-full text-center"
                         to="/guestbook"
                     >
                         <div className="inline-block w-full text-end hover:bg-amber-500">
