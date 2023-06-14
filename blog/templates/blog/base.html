@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="all" />
+
+      <title>{% block title %}{% endblock %}</title>
+
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'styles/main.css' %}"
+      />
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'ionicons/css/ionicons.css' %}"
+      />
+      <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'styles/jost.css' %}"
+      />
+      
+      <meta name="theme-color" content="#111016">
+      <script>
+          document.documentElement.setAttribute("light", "");
+          document.documentElement.classList.toggle("light-mode");
+          /*if (localStorage.getItem("theme") === "light") {
+              
+          } else {
+              document.documentElement.setAttribute("dark", "");
+              document.documentElement.classList.toggle("dark-mode");
+          }*/
+      </script>
+      
+      <script src="{% static 'js/toggles.js' %}"></script>
+    </head>
+    <body>
+        <header class="header" id="top">
+            <div class="container">
+                <div class="row">
+                    <div class="header__inner col col-12">
+                        <div class="logo">
+                            <a class="logo__link" href="/"> abe dev </a>
+                        </div>
+                        <nav class="main-nav">
+                            <div class="main-nav__box">
+                                <div class="nav__icon-close">
+                                    <i class="ion ion-md-close"></i>
+                                </div>
+                                <div class="nav__title">Menu</div>
+                                <ul class="nav__list list-reset">
+                                    <li class="nav__item">
+                                        <a href="/" class="nav__link">Home</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="/" class="nav__link"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="/" class="nav__link"
+                                            >Subscribe</a
+                                        >
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="/about" class="nav__link"
+                                            >About</a
+                                        >
+                                    </li>
+                                    <!--<li class="nav__item nav__item-icon">
+                                        <div class="toggle-theme">
+                                            <div
+                                                class="toggle-moon"
+                                                onclick="darkMode()"
+                                                title="Enable dark mode"
+                                            >
+                                                <i class="ion ion-ios-moon"></i>
+                                            </div>
+                                            <div
+                                                class="toggle-sun"
+                                                onclick="darkMode()"
+                                                title="Enable light mode"
+                                            >
+                                                <i
+                                                    class="ion ion-ios-sunny"
+                                                ></i>
+                                            </div>
+                                        </div>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="nav-button">
+                            <i class="nav__icon icon__menu ion ion-md-menu"></i>
+                            <i
+                                class="nav__icon icon__search ion ion-md-search"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>{% block content %} {% endblock %}</main>
+    </body>
+</html>
