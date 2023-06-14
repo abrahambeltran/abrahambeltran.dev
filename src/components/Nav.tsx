@@ -3,11 +3,11 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
     return (
         <>
-            <div className="flex flex-col top-0 bg-white rounded-xl w-full">
-                <p className="flex justify-center mb-2 font-bold text-xl nav-link">
+            <div className="flex flex-row top-0 bg-white rounded-xl w-full lg:flex-col">
+                <p className="lg:flex justify-center mb-2 font-bold text-xl nav-link hidden lg:visible">
                     ┌─ Abe Dev ────┐
                 </p>
-                <nav className="flex flex-col items-end list-none m-6 ">
+                <nav className="flex flex-row items-end list-none m-6 space-x-2 lg:flex-col">
                     <Link
                         className="inline-block w-full text-center"
                         to="/"
@@ -44,7 +44,7 @@ const Layout = () => {
                         </div>
                     </Link>
                 </nav>
-                <p className="flex justify-center mb-2 font-bold text-xl nav-link">
+                <p className="lg:flex justify-center mb-2 font-bold text-xl nav-link hidden lg:visible">
                     └────────────┘
                 </p>
             </div>
