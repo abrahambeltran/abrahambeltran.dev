@@ -7,15 +7,23 @@ import Guestbook from "./components/Guestbook";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Nav />}>
-                    <Route index element={<Home />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="guestbook" element={<Guestbook />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <div>
+            <BrowserRouter>
+                <div className="grid grid-cols-5">
+                    <div className="col-span-1">
+                        <Nav />
+                    </div>
+                    <div className="col-span-4">
+                        <Routes>
+                            <Route index element={<Home />} />
+                            <Route path="/blog" element={<Blog />} />
+                            <Route path="guestbook" element={<Guestbook />} />
+                        </Routes>
+                    </div>
+                </div>
+            </BrowserRouter>
+        </div>
+        
     );
 }
 
