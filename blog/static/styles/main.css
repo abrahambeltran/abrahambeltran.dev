@@ -46,6 +46,7 @@
 	color: var(--color-gray-90);
 	padding: 1em 0.625em; /* 16px 10px /16 */
 }
+
 .message-box ul {
 	list-style: none;
 	margin-top: 0;
@@ -175,6 +176,7 @@ header {
 .nav-item {
 	display: inline-block;
 	margin-right: 1em;
+	list-style: none;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
@@ -183,6 +185,15 @@ header {
 	text-decoration: underline;
 }
 
+/* About Page */
+
+.about-img{
+	list-style: none;
+}
+.about-img img{
+	box-shadow: 20px 16px wheat;
+	border-radius: 5px;
+}
 /* Posts list */
 .postlist {
 	list-style: none;

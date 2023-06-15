@@ -3,67 +3,44 @@
 {% block content %}
 <div class="container">
     <main>
-        <h1 className="text-2xl font-bold" id="home">
-            Welcome to the endgame!
-        </h1>
-        <p className="my-4">
-            This is my personal website which is currently under
-            construction. Plans are to have the sections currently seen on
-            the left with login added so that posts can have
-            comments/likes/user posts/profiles
+        <h2>
+            How was this website made?
+        </h2>
+        <p>
+            This website has undergone many redesigns and iterations, starting with something more
+            involved than this layout, and then slowly progressing to simplicity over time.
         </p>
-        <h1 className="text-xl font-bold" id="home">
-            What is this all about?
-        </h1>
-        <p className="my-4">
-            My name is Abraham, some people coming here may also know me as
-            727.
+        <ul class="about-img">
+            <li><img src="../../static/images/v1.png"></li>
+            <li><img src="../../static/images/v2.png"></li>
+            <li><img src="../../static/images/v3.png"></li>
+        </ul>
+        <h3>
+            What is the stack? How is it hosted?
+        </h3>
+        <p>
+            The website is currently using nginx and gunicorn on an Ubuntu droplet hosted 
+            by DigitalOcean. The entire website is written using Django with plugins like
+            markdownify to generate the blog and some WebSocket magic for some other areas 
+            of the website.
         </p>
-        <p className="my-3 mb-8">
-            I'm actually currently looking for a software engineering
-            position so if you stumble upon this website and are hiring or
-            this was attached to an application, browse around and make sure
-            to contact me.
+        <h3>
+            Why go through all the trouble making this?
+        </h3>
+        <p>
+            The main purpose of the website was to host projects that I have been working on over the 
+            past few months as well as hosting some of them here. The website is built with Django for 
+            this reason specifically so more 'apps' can be added onto the main site.
         </p>
-        <p className="my-4">
-            <p className="text-md font-bold">Topics of discussion:</p>
-            <ul className="list-disc mx-4">
-                <li>Building and fixing my car</li>
-                <li>Technical tidbits about important software</li>
-            </ul>
+        <p>
+            Most importantly making this website was fun and helped me learn some new libraries I 
+            hadn't used before. At the end of the day, it's all worth it
         </p>
-        <p className="my-4">
-            <p className="text-md font-bold">Interests:</p>
-            <ul className="list-disc mx-4">
-                <li>Building things</li>
-                <li>Breaking things</li>
-                <li>Learning about how the universe functions</li>
-                <li>Improving my engineering skills</li>
-                <li>Hiking with my cat</li>
-            </ul>
-        </p>
-    
-        <p className="my-4 mt-10">
-            This website is mainly going to be for voicing my opinions while
-            sharing different technical thoughts and learnings as I progress
-            as a developer. Although I don't have a lot of experience
-            writing, I do thoroughly enjoy it and have always been
-            interested in starting a blog which will be hosted here!
-        </p>
-        <p className="my-4">
-            Most of what you currently see will undoubtedly change over time
-            and evolve as I evolve as a developer. Due to this, things are
-            constantly changing and some of the website's core
-            functionalities and technologies might also change.
-        </p>
-        <p className="my-4">
-            If for whatever reason you are expecting to link to something
-            here and it is not here, there will be a chat where you can
-            submit issues/thoughts/etc soon enough.
-        </p>
-        <p className="my-4">
-            This page is hosted using nginx on an ubuntu instance hosted by
-            DigitalOcean
+        <h2>More information</h2>
+        <p>
+            If you're looking for something specific, the information will be available on this page
+            in the form of a Johnny Decimal system in the future. For now, here are links to external
+            websites where you can find more about me and my projects.
         </p>
     </main>
 </div>
