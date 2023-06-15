@@ -1,29 +1,12 @@
 {% extends 'blog/base.html' %}
 {% block title %} HOME | abe dev{% endblock %}
 {% block content %}
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col col-12">
-                    <div class="hero__inner">
-                        <div class="hero__center">
-                            <h1 class="hero__title">HELLO EVERYBODY</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="container">
-        <div class="article__list animate">
-            {% for posts in posts %}
-                    <div class="article__content">
-                        <h2 class="article__title">
-                        <a href="/{{ posts.slug }}/">{{posts.title}}</a>
-                        </h2>
-                        <p class="article__excerpt">{{ posts.intro }}</p>
-                    </div>
-            {% endfor %}
-        </div>
-    </div>
+    <ul class="postlist">
+        {% for posts in posts %}
+            <li class="postlist-item">
+                <a href="/{{ posts.slug }}/" class="postlist-link">{{posts.title}}</a>
+                <time class="postlist-date">{{ posts.created_at|date }}</time>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

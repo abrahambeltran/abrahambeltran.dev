@@ -10,7 +10,6 @@
                     <h2 class="article__title">
                         <h1>{{ post.title }}</h1>
                     </h2>
-                    <time class="article__excerpt">{{ post.created_at|date }} </time>
                     <p>
                         {{ post.body|markdownify|safe }}
                     </p>

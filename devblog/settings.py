@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'markdownify.apps.MarkdownifyConfig',
+    'markdownx',
     "django_static_ionicons",
     "django_browser_reload",
 ]
@@ -74,6 +75,7 @@ TEMPLATES = [
 
 MARKDOWNIFY = {
    "default": {
+        "BLEACH": False,
         "WHITELIST_TAGS": [
             "a", 
             "p", 
@@ -93,6 +95,7 @@ MARKDOWNIFY = {
             'ul',
             'code',
             'span',
+            'img',
             'pre' ],
         "MARKDOWN_EXTENSIONS": [
             "markdown.extensions.fenced_code", # dotted path
@@ -103,10 +106,7 @@ MARKDOWNIFY = {
                 "lang_prefix": "example-"
             }
         }
-   },
-   "alternative": {
-      "WHITELIST_TAGS": ["a", "p", ],
-      "MARKDOWN_EXTENSIONS": ["markdown.extensions.fenced_code", ]
+        
    }
 }
 
