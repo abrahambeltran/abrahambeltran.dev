@@ -14,3 +14,6 @@ def posts(request, slug):
 
 def about(request):
     return render(request, "blog/about.html")
+
+def chat(request):
+    return render(request, "blog/chat.html")

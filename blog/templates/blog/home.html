@@ -15,29 +15,15 @@
         </div>
     </section>
     <div class="container">
-        <div class="row animate">
+        <div class="article__list animate">
             {% for posts in posts %}
-            <div class="article col col-4 col-d-6 col-t-12">
-                <div class="article__inner">
-                    <div class="article__head">
-                        <time class="article__date">{{ posts.created_at|timesince }} ago </time>
-                        <a class="article__image" href="/{{ posts.slug }}/">
-                        <picture>
-                            <source srcset="/media/egg/egg-icon.webp" type="image/webp"/>
-                            <source srcset="/media/egg/egg-icon.jpg" type="image/jpg"/>
-                            <img src="/media/egg/egg-icon.jpg" alt="The Egg">
-                        </picture>
-                        </a>
-                    </div>
                     <div class="article__content">
                         <h2 class="article__title">
                         <a href="/{{ posts.slug }}/">{{posts.title}}</a>
                         </h2>
                         <p class="article__excerpt">{{ posts.intro }}</p>
                     </div>
-                </div>
-            </div>
             {% endfor %}
         </div>
-      </div>
+    </div>
 {% endblock %}
