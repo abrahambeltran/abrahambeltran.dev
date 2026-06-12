@@ -1,29 +1,22 @@
-"""devblog URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import include, path
+from django_distill import distill_path
 
 from blog.views import home, posts, about, chat
+from blog.models import Post
+
+
+def _all_posts():
+    for post in Post.objects.all():
+        yield {'slug': post.slug}
+
 
 urlpatterns = [
-    path("", home, name='home'),
-    path("about/", about, name='about'),
-    path("chat/", chat, name='chat'),
+    distill_path('', home, name='home', distill_func=lambda: [{}]),
+    distill_path('about/', about, name='about', distill_func=lambda: [{}]),
+    distill_path('chat/', chat, name='chat', distill_func=lambda: [{}]),
+    distill_path('<slug:slug>/', posts, name='post', distill_func=_all_posts),
     path('admin/', admin.site.urls),
-    path("<slug:slug>/", posts, name='post'),
-    path("__reload__/", include("django_browser_reload.urls")),
-    path("markdownx/", include('markdownx.urls'))
+    path('__reload__/', include('django_browser_reload.urls')),
+    path('markdownx/', include('markdownx.urls')),
 ]
